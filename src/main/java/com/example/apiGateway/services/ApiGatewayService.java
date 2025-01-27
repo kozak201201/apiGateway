@@ -19,7 +19,7 @@ public class ApiGatewayService {
     public Mono<List<Person>> getPeople() {
         return webClientBuilder.build()
                 .get()
-                .uri("http://ec2-13-60-25-240.eu-north-1.compute.amazonaws.com:8085/api/people")
+                .uri("https://exchange-service.test201201.online:8085/api/people")
                 .retrieve()
                 .bodyToMono(new ParameterizedTypeReference<List<Person>>() {});
     }
